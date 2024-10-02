@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f9f7f7; /* Dark background */
+  --foreground: #0d0d0d; /* Light text */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fbf9f9;
+    --foreground: #000000;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.dropdown-menu {
+  background-color: #000; /* Black background for dropdown */
+  color: #fff; /* White text for dropdown */
+}
+
+.dropdown-menu .dropdown-item {
+  background-color: transparent; /* Transparent background for items */
+  color: #fff; /* White text for items */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #333; /* Darker background on hover */
+}
